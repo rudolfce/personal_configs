@@ -1,0 +1,14 @@
+Usage: con server|status|umount [mount]
+
+Arguments:
+    server must be on the server list of the script (see below)
+    status  - Shows if any sshfs mount is active (sftp check);
+    umount  - Umounts any active sshfs point.
+
+Option:
+    mount - mounts server folder according to script definitions.
+
+Server list:
+    C3SL:
+    - Servidoras de uso geral, para qualquer usuario:
+      macalan, bowmore, caporal, priorat, talisker, cohiba
