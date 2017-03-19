@@ -1,0 +1,6 @@
+[user]
+	email = rudolfce@gmail.com
+	name = Rudolf Copi Eckelberg
+[merge]
+	tool = meld
+	conflictstyle = diff3
