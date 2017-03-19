@@ -2,7 +2,7 @@ con ()
 {
     USER=rce16
     case $1 in
-    @(macalan|bowmore|caporal|priorat|talisker|cohiba))
+    macalan)
         if [[ $2 == mount ]]; then
             sshfs $USER@${1}.c3sl.ufpr.br:/home/bcc/$USER ~/$USER
         else

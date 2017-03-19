@@ -10,5 +10,4 @@ Option:
 
 Server list:
     C3SL:
-    - Servidoras de uso geral, para qualquer usuario:
-      macalan, bowmore, caporal, priorat, talisker, cohiba
+    - macalan - the only one left. Sorry. Come back some other time. 
