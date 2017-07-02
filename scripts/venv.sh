@@ -1,4 +1,4 @@
-env(){
+venv(){
     if [ ! -z $1 ] ; then
 	ENV_FOLDER=$1
     else
