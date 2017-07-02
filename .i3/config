@@ -95,7 +95,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $spotify "9: Spotify"
-set $pulse "8: Volume Control"
+set $pulse "p: Volume Control"
 set $steam "10: Steam"
 set $browser "4: Browser"
 
@@ -106,16 +106,17 @@ workspace 3 output HDMI-0
 workspace $browser output HDMI-0
 workspace 5 output HDMI-0
 
-#workspace 6 output DVI-I-0
-#workspace 7 output DVI-I-0
-#workspace $pulse output DVI-I-0
-#workspace $spotify output DVI-I-0
-#workspace $steam output DVI-I-0
-workspace 6 output HDMI-0
-workspace 7 output HDMI-0
-workspace $pulse output HDMI-0
-workspace $spotify output HDMI-0
-workspace $steam output HDMI-0
+workspace 6 output DVI-I-0
+workspace 7 output DVI-I-0
+workspace 8 output DVI-I-0
+workspace $pulse output DVI-I-0
+workspace $spotify output DVI-I-0
+workspace $steam output DVI-I-0
+#workspace 6 output HDMI-0
+#workspace 7 output HDMI-0
+#workspace $pulse output HDMI-0
+#workspace $spotify output HDMI-0
+#workspace $steam output HDMI-0
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -126,7 +127,8 @@ bindsym $mod+5 workspace 5
 
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace $pulse
+bindsym $mod+8 workspace 8
+bindsym $mod+p workspace $pulse
 bindsym $mod+9 workspace $spotify
 bindsym $mod+0 workspace $steam
 
@@ -138,7 +140,8 @@ bindsym $mod+Shift+4 move container to workspace $browser
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace $pulse
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+p move container to workspace $pulse
 bindsym $mod+Shift+9 move container to workspace $spotify
 bindsym $mod+Shift+0 move container to workspace $steam
 
