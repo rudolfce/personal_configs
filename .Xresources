@@ -1,23 +1,39 @@
-xterm*Background: rgb:fa/fa/fa
-xterm*Foreground: rgb:37/3e/40
+! special
+*.foreground:   #102015
+*.background:   #f9f9f9
+*.cursorColor:  #102015
 
-xterm*color0: rgb:ff/00/00
-xterm*color1: rgb:88/00/00
-xterm*color2: rgb:00/88/22
-xterm*color3: rgb:ff/00/ff
-xterm*color4: rgb:55/55/00
-xterm*color5: rgb:00/ff/ff
-xterm*color6: rgb:55/00/00
-xterm*color7: rgb:00/55/00
-xterm*color8: rgb:00/00/55
-xterm*color9: rgb:55/00/55
-xterm*color10: rgb:00/77/22
-xterm*color11: rgb:c5/a5/00
-xterm*color12: rgb:00/00/ff
-xterm*color13: rgb:ff/00/ff
-xterm*color14: rgb:00/44/aa
-xterm*color15: rgb:00/00/ff
+! black
+*.color0:       #000000
+*.color8:       #343434
 
-xterm*faceName: Liberation Mono:size=9:antialias=true
+! red
+*.color1:       #e92f2f
+*.color9:       #e92f2f
+
+! green
+*.color2:       #0ed839
+*.color10:      #0ed839
+
+! yellow
+*.color3:       #dddd13
+*.color11:      #dddd13
+
+! blue
+*.color4:       #3b48e3
+*.color12:      #3b48e3
+
+! magenta
+*.color5:       #f996e2
+*.color13:      #f996e2
+
+! cyan
+*.color6:       #23edda
+*.color14:      #23edda
+
+! white
+*.color7:       #ababab
+*.color15:      #215560
+
+xterm*faceName: Liberation Mono:size=10.5:antialias=true
 xterm*font: 7x13
-
