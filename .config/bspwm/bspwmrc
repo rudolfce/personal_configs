@@ -1,0 +1,46 @@
+#! /bin/sh
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Configuration of multiple monitors - deal with monitors plug/unplug
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+
+xrandr --auto
+OUTPUTS=`xrandr --listmonitors | awk '{print $4}' | grep .`
+if [[ `wc -l <<< $OUTPUTS` -eq 2 ]];
+then
+    MONITOR1=`sed -n '1 p' <<< $OUTPUTS`
+    MONITOR2=`sed -n '2 p' <<< $OUTPUTS`
+
+    xrandr --output $MONITOR2 --left-of $MONITOR1
+    bspc monitor $MONITOR1 -d I II III IV V
+    bspc monitor $MONITOR2 -d VI VII VIII IX X
+else
+    bspc monitor -d I II III IV V VI VII VIII XI X
+fi
+
+bspc config border_width         2
+bspc config window_gap           10
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+# Slave keyboard settings
+setxkbmap -model "Kingston HyperX Alloy FPS Mechanical Gaming Keyboard" -layout us -variant intl
+
+# Compositing
+compton -f &
+
+# Polybar
+polybar mybar &
+
+# Wallpaper
+nitrogen --restore
